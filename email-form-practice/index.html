@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  // Create HTML elements using JavaScript
+  const form = document.createElement('form');
+  form.setAttribute('id', 'emailForm');
+
+  const nameLabel = document.createElement('label');
+  nameLabel.textContent = 'Name:';
+  form.appendChild(nameLabel);
+
+  const nameInput = document.createElement('input');
+  nameInput.setAttribute('type', 'text');
+  nameInput.setAttribute('name', 'name');
+  form.appendChild(nameInput);
+
+  const emailLabel = document.createElement('label');
+  emailLabel.textContent = 'Email:';
+  form.appendChild(emailLabel);
+
+  const emailInput = document.createElement('input');
+  emailInput.setAttribute('type', 'email');
+  emailInput.setAttribute('name', 'email');
+  form.appendChild(emailInput);
+
+  const messageLabel = document.createElement('label');
+  messageLabel.textContent = 'Message:';
+  form.appendChild(messageLabel);
+
+  const messageTextarea = document.createElement('textarea');
+  messageTextarea.setAttribute('name', 'message');
+  form.appendChild(messageTextarea);
+
+  const submitButton = document.createElement('button');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.textContent = 'Submit';
+  form.appendChild(submitButton);
+
+  // Append the form to the body
+  document.body.appendChild(form);
+</script>
+
+</body>
+</html>
